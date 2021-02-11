@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<header class="header-page">
+		<section class="header-page__wrapper">
+			<nav class="menu">
+				<button type="button" class="button button--menu">
+					<span></span>
+					Меню
+				</button>
+			</nav>
+			<div class="logo">
+				<a href="#" class="header-page__logo">
+					<img src="image/logo.svg" width="90" height="50" class="header-page__img" alt="Логотип">
+				</a>
+			</div>
+
+
+			<section class="feedback">
+				<div class="feedback__buttons">
+					<button type="button" class="button button--hidden">
+						<img src="image/phone.png" width="17" height="17" alt="Позвонить">
+						</button>
+					<button type="button" class="button button--hidden">
+						<img src="image/message.png" width="20" height="20" alt="Написать сообщение">
+						</button>
+					<button type="button" class="button button--hidden">
+						<img src="image/user.png" width="20" height="18" alt="Войти">
+						</button>
+				</div>		
+			</section>
+			<div class="header-page__service">
+				<label for="btn" class="header-page__label">Оставить заявку</label>
+				<button type="button" class="button button--visible" id="btn">
+					<img src="image/service.png" width="20" height="20" alt="Оставить заявку">
+					</button>
+				<label for="btn1" class="header-page__label">Статус ремонта</label>
+				<button type="button" class="button button--visible" id="btn2">
+					<img src="image/search.png" width="16" height="20" alt="Статус ремонта">
+					</button>
+			</div>
+		</section>
+	</header>
+
+
+	<main class="main-page">
+		<h1 class="main-page__title">Услуги и сервисы</h1>
+		<nav class="menu">
+			<ul class="menu__list">
+				<a class="menu__link menu__link--active" href="#">
+					<li class="menu__item">Ремонтируемые бренды</li>
+				</a>
+				<a class="menu__link" href="#">
+					<li class="menu__item">Ремонтируемые устройства</li>
+				</a>
+				<a class="menu__link" href="#">
+					<li class="menu__item">Дополнительные услуги</li>
+				</a>
+				<a class="menu__link" href="#">
+					<li class="menu__item">Цены на услуги</li>
+				</a>
+				<a class="menu__link" href="#">
+					<li class="menu__item">Адреса сервисных центров</li>
+				</a>
+				<a class="menu__link" href="#">
+					<li class="menu__item">Специальные цены</li>
+				</a>
+				<a class="menu__link" href="#">
+					<li class="menu__item">Отзывы</li>
+				</a>
+			</ul>
+		</nav>
+		<article class="main-page__description">
+			<section class="main-page__text">
+				<input type="checkbox" class="main-page__checkbox" id="checkbox">
+				<label class="main-page__label" for="checkbox">Читать далее</label>
+				<p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+				<p class="main-page__text--hidden">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+			</section>
+			<img src="image/service-centre.jpg" class="main-page__img" alt="Услуга и сервис">
+
+		</article>
+	</main>
+
+</body></html>
