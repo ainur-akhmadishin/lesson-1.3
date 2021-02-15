@@ -9,13 +9,13 @@
 </head>
 
 <body>
-	<header class="header-page">
+	<header class="header-page container">
 		<section class="header-page__wrapper">
-			<nav class="menu">
+	
 				<button type="button" class="button button--menu">
 					<span></span>
 				</button>
-			</nav>
+		
 			<div class="logo">
 				<a href="#" class="header-page__logo">
 					<img src="image/logo.svg" width="90" height="50" class="header-page__img" alt="Логотип">
@@ -51,14 +51,17 @@
 
 
 	<main class="main-page">
+	<section class="main-page__wrapper container">
 		<h1 class="main-page__title">Услуги и сервисы</h1>
 		<nav class="menu">
+		<span class="menu__blur"></span>
 			<ul class="menu__list">
-				<a class="menu__link menu__link--active" href="#">
-					<li class="menu__item">Ремонтируемые бренды</li>
+			
+				<a class="menu__link " href="#">
+					<li class="menu__item menu__link--active">Ремонтируемые бренды</li>
 				</a>
 				<a class="menu__link" href="#">
-					<li class="menu__item">Ремонтируемые устройства</li>
+					<li class="menu__item ">Ремонтируемые устройства</li>
 				</a>
 				<a class="menu__link" href="#">
 					<li class="menu__item">Дополнительные услуги</li>
@@ -76,8 +79,9 @@
 					<li class="menu__item">Отзывы</li>
 				</a>
 			</ul>
+			
 		</nav>
-		<article class="main-page__description">
+		<article class="about-company">
 			<section class="main-page__text">
 				<input type="checkbox" class="main-page__checkbox" id="checkbox">
 				<label class="main-page__label" for="checkbox">Читать далее</label>
@@ -87,6 +91,7 @@
 			<img src="image/service-centre.jpg" class="main-page__img" alt="Услуга и сервис">
 
 		</article>
+		</section>
 	</main>
 
 </body>
