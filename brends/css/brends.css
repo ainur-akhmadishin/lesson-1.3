@@ -1,0 +1,260 @@
+@font-face {
+	font-family: "TTLakes-Regular";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/TTLakes-Regular.woff") format("woff"),
+		url("../fonts/TTLakes-Regular.woff2") format("woff2")
+}
+
+@font-face {
+	font-family: "TTLakes-Medium";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/TTLakes-Medium.woff") format("woff"),
+		url("../fonts/TTLakes-Medium.woff2") format("woff2")
+}
+
+@font-face {
+	font-family: "TTLakes-Bold";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../fonts/TTLakes-Bold.woff") format("woff"),
+		url("../fonts/TTLakes-Bold.woff2") format("wof2")
+}
+
+
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* мобильная версия*/
+
+body {
+	font-family: "TTLakes-Regular", "TTLakes-Bold", "Arial", "sans-serif";
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+	min-width: 320px;
+}
+
+.brend__container {
+	/*	width: 320px;*/
+	height: 140px;
+	background-color: #F2F2F2;
+	padding-top: 16px;
+	padding-left: 16px;
+}
+
+.blur{
+	display: block;
+	width: 24px;
+	height: 72px;
+	position: fixed;
+	right: 0;
+	background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+/*	background-color: red;*/
+	z-index: 100;
+	
+}
+
+.brend__link {
+	/*	width: 240px;*/
+	height: 72px;
+	border-radius: 6px;
+	background-color: white;
+	/*	border: 1px solid black;*/
+	margin-left: 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.brend-img {
+	margin-left: 16px;
+}
+
+.brend__icon {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border: 2px solid #FF3E79;
+	border-radius: 20px;
+	margin-right: 16px;
+	position: relative;
+}
+
+.brend__icon::before {
+	content: '';
+	width: 10px;
+	height: 10px;
+	/*	background-color: aqua;*/
+	border-right: 2px solid #FF3E79;
+	border-top: 2px solid #FF3E79;
+	position: absolute;
+	transform: rotate(45deg);
+	top: 13px;
+	left: 13px;
+}
+
+.swiper-pagination-bullet {
+	background-color: #DDDDDD;
+	width: 12px;
+	height: 12px;
+	opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #B5B6BC;
+	;
+}
+
+.brend__title {
+	display: block;
+	margin: 16px;
+	font-family: 'TTLakes-Regular';
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	text-transform: uppercase;
+	color: #7E7E82;
+	font-weight: 400;
+}
+
+@media (min-width: 768px) {
+	
+
+	.brend__container {
+		padding-left: 0;
+		height: auto;
+	}
+	.blur{
+		display: none;
+	}
+	.brend__wrapper {
+
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+/*		border: 1px solid red;*/
+		height: 170px;
+		overflow: hidden;
+
+	}
+
+	.brend__link {
+		width: 224px;
+		height: 72px;
+		margin-bottom: 16px;
+
+	}
+
+	.label {
+		font-family: "TTLakes-Medium";
+		margin-bottom: 16px;
+		margin-left: 48px;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		position: relative;
+		cursor: pointer;
+	}
+	
+	.checkbox{
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	}
+	
+	.checkbox + label::before {
+	content: '';
+	position: absolute;
+	left: -16px;
+	top: 4px;
+	width: 8px;
+	height: 11px;
+	background: url(../../image/checked.png) no-repeat;
+}
+	
+	.checkbox:checked + label::before {
+	content: '';
+	position: absolute;
+	left: -16px;
+	top: 4px;
+	width: 8px;
+	height: 11px;
+	background: url(../../image/checked.png) no-repeat;
+	transform: rotate(180deg);
+	display: block;
+}
+
+}
+
+@media (min-width: 1120px) {
+	
+	.container{
+	position: relative;
+	width: 1120px;
+	margin: 0 auto;
+/*		border: 1px solid red;*/
+}
+	
+		.brend__wrapper {
+
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+/*		border: 1px solid red;*/
+		height: 170px;
+		overflow: hidden;
+	}
+	
+	.brend__link{
+		width: 240px;
+		margin-left: 32px;
+	}
+	
+}
