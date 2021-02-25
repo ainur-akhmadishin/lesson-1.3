@@ -13,7 +13,10 @@
 
 <body>
 	<section class="brend container">
-		<h1 class="brend__title">Ремонт техники различных брендов</h1>
+		<div class="header">
+			<h1 class="header__title">Ремонт техники различных брендов</h1>
+		</div>
+
 		<div class="swiper-container brend__container">
 			<span class="blur"></span>
 			<div class="swiper-wrapper brend__wrapper">
@@ -36,7 +39,7 @@
 					<span class="brend__icon"></span>
 				</a>
 				<a href="#" class="swiper-slide brend__link">
-					<img src="../image/hp.png" width="52px" height="52px" alt="hp">
+					<img src="../image/hp.png" width="52px" height="52px" alt="hp" class="brend-img">
 					<span class="brend__icon"></span>
 				</a>
 				<a href="#" class="swiper-slide brend__link">
@@ -65,9 +68,9 @@
 				</a>
 			</div>
 			<div class="swiper-pagination"></div>
-			<input type="checkbox" id="checkbox" class="checkbox">
-			<label for="checkbox" class="label">Показать все</label>
-
+			<span class=" button-span"></span>
+			<button type="button" class="button-show">Показать все</button>
+			
 		</div>
 
 	</section>

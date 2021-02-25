@@ -2,7 +2,7 @@
 	font-family: "TTLakes-Regular";
 	font-style: normal;
 	font-weight: 400;
-	src: url("../fonts/TTLakes-Regular.woff") format("woff"),
+	src: url("../../fonts/TTLakes-Regular.woff") format("woff"),
 		url("../fonts/TTLakes-Regular.woff2") format("woff2")
 }
 
@@ -10,16 +10,16 @@
 	font-family: "TTLakes-Medium";
 	font-style: normal;
 	font-weight: 400;
-	src: url("../fonts/TTLakes-Medium.woff") format("woff"),
-		url("../fonts/TTLakes-Medium.woff2") format("woff2")
+	src: url("../../fonts/TTLakes-Medium.woff") format("woff"),
+		url("../../fonts/TTLakes-Medium.woff2") format("woff2")
 }
 
 @font-face {
 	font-family: "TTLakes-Bold";
 	font-style: normal;
 	font-weight: 700;
-	src: url("../fonts/TTLakes-Bold.woff") format("woff"),
-		url("../fonts/TTLakes-Bold.woff2") format("wof2")
+	src: url("../../fonts/TTLakes-Bold.woff") format("woff"),
+		url("../../fonts/TTLakes-Bold.woff2") format("wof2")
 }
 
 
@@ -33,6 +33,10 @@ html {
 *:before,
 *:after {
 	box-sizing: inherit;
+}
+button{
+	outline: none;
+	
 }
 
 
@@ -76,16 +80,16 @@ body {
 	padding-left: 16px;
 }
 
-.blur{
+.blur {
 	display: block;
 	width: 24px;
 	height: 72px;
 	position: fixed;
 	right: 0;
 	background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-/*	background-color: red;*/
+	/*	background-color: red;*/
 	z-index: 100;
-	
+
 }
 
 .brend__link {
@@ -104,6 +108,21 @@ body {
 	align-items: center;
 }
 
+.brend__link:hover, :focus {
+	background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+	box-shadow:
+		1px 1px #BEBEBE,
+		2px 2px #BEBEBE,
+		3px 3px #BEBEBE,
+		4px 4px #BEBEBE,
+		5px 5px #BEBEBE,
+		6px 6px #BEBEBE,
+		7px 7px #BEBEBE;
+	outline: none;
+}
+
+
+
 .brend-img {
 	margin-left: 16px;
 }
@@ -121,15 +140,15 @@ body {
 
 .brend__icon::before {
 	content: '';
-	width: 10px;
-	height: 10px;
+	width: 8px;
+	height: 8px;
 	/*	background-color: aqua;*/
 	border-right: 2px solid #FF3E79;
 	border-top: 2px solid #FF3E79;
 	position: absolute;
 	transform: rotate(45deg);
-	top: 13px;
-	left: 13px;
+	top: 14px;
+	left: 14px;
 }
 
 .swiper-pagination-bullet {
@@ -144,28 +163,33 @@ body {
 	;
 }
 
-.brend__title {
-	display: block;
-	margin: 16px;
+.header {
+	padding: 16px;
+	background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+}
+
+.header__title {
 	font-family: 'TTLakes-Regular';
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: -0.2px;
 	text-transform: uppercase;
 	color: #7E7E82;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 @media (min-width: 768px) {
-	
+
 
 	.brend__container {
 		padding-left: 0;
 		height: auto;
 	}
-	.blur{
+
+	.blur {
 		display: none;
 	}
+
 	.brend__wrapper {
 
 		display: -webkit-flex;
@@ -175,11 +199,14 @@ body {
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
-/*		border: 1px solid red;*/
 		height: 170px;
 		overflow: hidden;
-
 	}
+
+	.brend__wrapper--heigth {
+		height: auto;
+	}
+
 
 	.brend__link {
 		width: 224px;
@@ -188,7 +215,7 @@ body {
 
 	}
 
-	.label {
+	.button-show {
 		font-family: "TTLakes-Medium";
 		margin-bottom: 16px;
 		margin-left: 48px;
@@ -197,49 +224,49 @@ body {
 		letter-spacing: -0.2px;
 		position: relative;
 		cursor: pointer;
+		border: none;
+		outline: none;
+		box-shadow: none;
+
 	}
 	
-	.checkbox{
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
+	.button-show:hover{ 
+			opacity: .3;		
 	}
 	
-	.checkbox + label::before {
-	content: '';
-	position: absolute;
-	left: -16px;
-	top: 4px;
-	width: 8px;
-	height: 11px;
-	background: url(../../image/checked.png) no-repeat;
+	.button-show:focus{
+		background: none;
+		border: none;
 }
+
+
+	.button-span {
+		left: 35px;
+		top: 18px;
+		display: block;
+		position: relative;
+		width: 12px;
+		height: 11px;
+		z-index: 19;
+		background: url(../../image/checked.png) no-repeat;
+	}
 	
-	.checkbox:checked + label::before {
-	content: '';
-	position: absolute;
-	left: -16px;
-	top: 4px;
-	width: 8px;
-	height: 11px;
-	background: url(../../image/checked.png) no-repeat;
-	transform: rotate(180deg);
-	display: block;
-}
+	.button-span--rotate{
+		transform: rotate(180deg);
+	}
 
 }
 
 @media (min-width: 1120px) {
-	
-	.container{
-	position: relative;
-	width: 1120px;
-	margin: 0 auto;
-/*		border: 1px solid red;*/
-}
-	
-		.brend__wrapper {
 
+	.container {
+		position: relative;
+		width: 1120px;
+		margin: 0 auto;
+/*		border: 1px solid red;*/
+	}
+
+	.brend__wrapper {
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -247,14 +274,14 @@ body {
 		display: flex;
 		justify-content: flex-start;
 		flex-wrap: wrap;
-/*		border: 1px solid red;*/
-		height: 170px;
+		/*			border: 1px solid red;*/
+		*/ height: auto;
 		overflow: hidden;
 	}
-	
-	.brend__link{
+
+	.brend__link {
 		width: 240px;
 		margin-left: 32px;
 	}
-	
+
 }
